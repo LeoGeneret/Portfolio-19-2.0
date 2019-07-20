@@ -1,0 +1,31 @@
+.container {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.row {
+    height: 5vh;
+}
+
+.container .row:nth-child(even) {
+    background-color: black;
+}
+
+
+body {
+    max-height: 100vh;
+    height: 100%;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+
+}
+
+h1, h2 {
+    color: white;
+    font-size: 5rem;
+}

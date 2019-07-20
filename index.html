@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<div lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="1" class="row lol"></div>
+        <div id="2" class="row"></div>
+        <div id="3" class="row lol"></div>
+        <div id="4" class="row"></div>
+        <div id="5" class="row lol"></div>
+        <div id="6" class="row"></div>
+        <div id="7" class="row lol"></div>
+        <div id="8" class="row"></div>
+        <div id="9" class="row lol"></div>
+        <div id="10" class="row"></div>
+        <div id="11" class="row lol"></div>
+        <div id="12" class="row"></div>
+        <div id="13" class="row lol"></div>
+        <div id="14" class="row"></div>
+        <div id="15" class="row lol"></div>
+        <div id="16" class="row"></div>
+        <div id="17" class="row lol"></div>
+        <div id="18" class="row"></div>
+        <div id="19" class="row lol"></div>
+        <div id="20" class="row"></div>
+    </div>
+
+
+    <div class="content">
+    <h1>HELLO, i'm Léo</h1>
+    <h2>Creative developper</h2>
+
+    </div>
+
+
+
+
+    <!-- TweenMax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+    <script>
+        var timeline = new TimelineLite();
+
+        timeline.from('[id="2"], [id="6"], [id="10"], [id="14"], [id="18"]', 0.75, {transform: 'translateX(-100vw)', ease: Power3.easeOut});
+        timeline.from('[id="4"], [id="8"], [id="12"], [id="16"], [id="20"]', 0.75, {transform: 'translateX(100vw)', ease: Power3.easeOut});
+
+        timeline.to('.lol', 1, {backgroundColor: "#000000", ease: Power3.easeOut}), '-=2';
+        timeline.from('.content', 1, {opacity:0, y: 50, ease: Power3.easeOut}), '-=2';
+    </script>
+</body>
+</html>
